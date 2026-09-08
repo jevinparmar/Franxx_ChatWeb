@@ -1,0 +1,472 @@
+.status-page-layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.status-list-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-main);
+  border-right: 0.0625rem solid var(--border-color);
+}
+
+.status-header {
+  padding: 1.25rem 1rem;
+  border-bottom: 0.0625rem solid var(--border-color);
+}
+
+.status-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.status-scroll {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* My Status Card */
+.my-status-container {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.75rem;
+  background-color: var(--bg-sec);
+  border: 0.0625rem solid var(--border-color);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.my-status-avatar-wrapper {
+  position: relative;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.my-status-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.add-status-badge {
+  position: absolute;
+  bottom: -0.125rem;
+  right: -0.125rem;
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+  border-radius: var(--radius-full);
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.125rem solid var(--bg-sec);
+  font-size: 0.875rem;
+}
+
+.my-status-info {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.my-status-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.125rem;
+}
+
+.my-status-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Recent Updates List */
+.status-section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03125rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.status-updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-card-item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.status-card-item:hover {
+  background-color: var(--bg-sec);
+}
+
+.status-avatar-ring {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15625rem;
+}
+
+.status-avatar-ring.unread {
+  background: linear-gradient(45deg, var(--accent-color), #a29bfe);
+}
+
+.status-avatar-ring.read {
+  background: var(--border-color);
+}
+
+.status-avatar-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 0.15625rem solid var(--bg-main);
+}
+
+.status-card-item:hover .status-avatar-ring img {
+  border-color: var(--bg-sec);
+}
+
+.status-item-info {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.status-item-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.125rem;
+}
+
+.status-item-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.status-item-action {
+  color: var(--text-secondary);
+  padding: 0.375rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-item-action:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Status Viewer Overlay */
+.status-viewer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #08060D;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-viewer-card {
+  width: 100%;
+  max-width: 30rem;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  padding: 1.25rem;
+  overflow: hidden;
+}
+
+.status-viewer-bars {
+  display: flex;
+  gap: 0.25rem;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.status-viewer-bar-bg {
+  flex: 1;
+  height: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.status-viewer-bar-progress {
+  height: 100%;
+  background-color: #FFFFFF;
+  width: 0%;
+}
+
+.status-viewer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  text-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.6);
+  z-index: 10;
+}
+
+.status-viewer-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-viewer-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.5);
+  object-fit: cover;
+}
+
+.status-viewer-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.status-viewer-time {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.status-viewer-close {
+  color: #FFFFFF;
+  padding: 0.375rem;
+  border-radius: var(--radius-full);
+  display: flex;
+}
+
+.status-viewer-close:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.status-viewer-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 2.5rem;
+  text-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.8);
+  z-index: 5;
+}
+
+/* Nav Tap Overlays */
+.status-viewer-nav-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.status-viewer-nav-overlay.left {
+  left: 0;
+}
+
+.status-viewer-nav-overlay.right {
+  right: 0;
+}
+
+/* Bottom Actions Bar (Views and Delete) */
+.status-viewer-bottom-actions {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.status-viewer-views-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.875rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+  color: #FFFFFF;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-fast);
+}
+
+.status-viewer-views-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.status-viewer-delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: var(--radius-full);
+  color: #ef4444;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-fast);
+}
+
+.status-viewer-delete-btn:hover {
+  background-color: rgba(239, 68, 68, 0.4);
+  color: #ffffff;
+}
+
+/* Status Viewers List Overlay Styles */
+.status-viewers-list-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 20;
+  display: flex;
+  align-items: flex-end;
+}
+
+.status-viewers-list-container {
+  width: 100%;
+  background-color: #0f172a;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 50%;
+  animation: slide-up-viewer 0.3s ease-out;
+}
+
+@keyframes slide-up-viewer {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.status-viewers-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.status-viewers-list-header h4 {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.status-viewers-list-header button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+
+.status-viewers-list-header button:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.status-viewers-list-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.status-viewer-user-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.status-viewer-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.status-viewer-user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.status-viewer-user-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.status-viewer-user-username {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.status-viewers-empty {
+  padding: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8125rem;
+}
