@@ -11,7 +11,7 @@ A modern, real-time web-based chat application built with **React**, **Node.js /
   - Aryan Kapadiya
   - Savan Detroja
 - **Guide:**
-  - Jaypalsinh Gohel Sir
+  - Jaypalsinh Gohil Sir
 
 ---
 
