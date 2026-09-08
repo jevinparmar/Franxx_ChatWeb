@@ -63,3 +63,10 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# ==========================================
+# Database Dumps & Backups (Never commit)
+# ==========================================
+dump/
+production-backup/
+atlas-backup/

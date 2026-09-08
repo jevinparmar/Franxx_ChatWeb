@@ -1,0 +1,15 @@
+[
+  {
+    "_seedKey": "chat_alice_bob",
+    "type": "individual",
+    "name": "",
+    "_memberKeys": ["demo_alice", "demo_bob"]
+  },
+  {
+    "_seedKey": "chat_group_demo",
+    "type": "group",
+    "name": "FRANXX Demo Group",
+    "_memberKeys": ["demo_alice", "demo_bob", "demo_charlie"],
+    "_adminKey": "demo_alice"
+  }
+]

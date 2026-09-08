@@ -1,0 +1,34 @@
+[
+  {
+    "_seedKey": "msg_alice_hello",
+    "_chatKey": "chat_alice_bob",
+    "_senderKey": "demo_alice",
+    "text": "Hey Bob! Welcome to FRANXX 🎉",
+    "mediaType": "none",
+    "status": "sent"
+  },
+  {
+    "_seedKey": "msg_bob_reply",
+    "_chatKey": "chat_alice_bob",
+    "_senderKey": "demo_bob",
+    "text": "Thanks Alice! This app looks amazing 🚀",
+    "mediaType": "none",
+    "status": "sent"
+  },
+  {
+    "_seedKey": "msg_group_alice",
+    "_chatKey": "chat_group_demo",
+    "_senderKey": "demo_alice",
+    "text": "Welcome everyone to the FRANXX Demo Group! 👋",
+    "mediaType": "none",
+    "status": "sent"
+  },
+  {
+    "_seedKey": "msg_group_charlie",
+    "_chatKey": "chat_group_demo",
+    "_senderKey": "demo_charlie",
+    "text": "Great to be here! Let's test out the group chat features.",
+    "mediaType": "none",
+    "status": "sent"
+  }
+]

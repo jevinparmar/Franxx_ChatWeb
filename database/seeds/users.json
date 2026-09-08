@@ -1,0 +1,35 @@
+[
+  {
+    "_seedKey": "demo_alice",
+    "name": "Alice Johnson",
+    "username": "alice_demo",
+    "email": "alice.demo@example.com",
+    "password": "DemoPass@123",
+    "bio": "Hey there! I'm using FRANXX 👋",
+    "role": "user",
+    "isPrivate": false,
+    "status": "Offline"
+  },
+  {
+    "_seedKey": "demo_bob",
+    "name": "Bob Smith",
+    "username": "bob_demo",
+    "email": "bob.demo@example.com",
+    "password": "DemoPass@123",
+    "bio": "Just a demo user exploring FRANXX.",
+    "role": "user",
+    "isPrivate": false,
+    "status": "Offline"
+  },
+  {
+    "_seedKey": "demo_charlie",
+    "name": "Charlie Davis",
+    "username": "charlie_demo",
+    "email": "charlie.demo@example.com",
+    "password": "DemoPass@123",
+    "bio": "Group chats are the best!",
+    "role": "user",
+    "isPrivate": true,
+    "status": "Offline"
+  }
+]

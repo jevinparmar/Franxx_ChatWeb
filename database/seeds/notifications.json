@@ -1,0 +1,19 @@
+[
+  {
+    "_seedKey": "notif_bob_follow",
+    "_senderKey": "demo_bob",
+    "_receiverKey": "demo_alice",
+    "type": "follow_request",
+    "message": "bob_demo wants to follow you.",
+    "read": false
+  },
+  {
+    "_seedKey": "notif_group_invite",
+    "_senderKey": "demo_alice",
+    "_receiverKey": "demo_charlie",
+    "type": "group_invite",
+    "message": "alice_demo invited you to FRANXX Demo Group.",
+    "_relatedChatKey": "chat_group_demo",
+    "read": false
+  }
+]
